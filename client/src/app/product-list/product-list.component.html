@@ -1,0 +1,22 @@
+<div style="margin-top: 30px;">
+<input type="text" style="background-color:silver;"
+ placeholder="   Search For Product" [(ngModel)]="myQuery"/>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <td>Product Name</td>
+        <td>Product Price</td>
+        <td >Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let x of bsProduct | search: myQuery">
+        <td>{{ x.product_name }}</td>
+        <td>{{ x.product_price }}</td>
+        <span><td><a [routerLink]="['/products/add', x]" class="btn btn-primary">Edit</a></td>
+        <td><a (click)="deleteProduct(x.id,x.product_name)" class="btn btn-danger">Delete</a></td></span>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+  
