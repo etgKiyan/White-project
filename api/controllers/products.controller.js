@@ -16,7 +16,7 @@ exports.create = async (req, res) => {
   };
   // Save Product in the database
   const result = await products.create(product);
-  //error
+  // If error
   if (!result.ok) {
     res.status(500).send({
       message: result.data || "Some error occurred while creating the Product."

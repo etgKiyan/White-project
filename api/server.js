@@ -1,6 +1,13 @@
+//  Express web server in server.js where we configure CORS,   --> Express is one of the most popular web frameworks for Node.js that supports routing, middleware
+//  initialize & run Express REST APIs.
 const express = require("express");
+
+ // body-parser helps to parse the request and create the req.body object
 const bodyParser = require("body-parser");
+
+// cors provides Express middleware to enable CORS with various options.
 const cors = require("cors");
+
 const db = require("./db/db");
 const app = express();
 

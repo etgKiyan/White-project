@@ -1,3 +1,4 @@
+// Routes for handling all CRUD operations
 module.exports = app => {
     const products = require("../controllers/Products.controller.js");
   
